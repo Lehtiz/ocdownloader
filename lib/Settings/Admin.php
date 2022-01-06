@@ -15,7 +15,7 @@ class Admin implements ISettings {
         $parameters = [];
 
         while ($Row = $rows->fetchRow()) {
-            $parameters['OCDS_' . $Row['KEY']] = $Row['VAL'];
+            $parameters['OCDS_' . $Row['key']] = $Row['val'];
         }
 
         return new TemplateResponse('ocdownloader', 'settings/admin', $parameters);

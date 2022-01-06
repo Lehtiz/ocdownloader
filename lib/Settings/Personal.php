@@ -25,7 +25,7 @@ class Personal implements ISettings {
         $rows = $settings->getAllValues();
 
         while ($row = $rows->fetchRow()) {
-            $parameters['OCDS_' . $row['KEY']] = $row['VAL'];
+            $parameters['OCDS_' . $row['key']] = $row['val'];
         }
 
         return new TemplateResponse('ocdownloader', 'settings/personal', $parameters);
