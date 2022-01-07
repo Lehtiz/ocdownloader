@@ -619,7 +619,7 @@ class Queue extends Controller
                             SET `STATUS` = ?, `IS_CLEANED` = ? WHERE `UID` = ? AND `GID` = ?';
                         if ($this->DbType == 1) {
                             $SQL = 'UPDATE *PREFIX*ocdownloader_queue
-                                SET "status" = ?, "IS_CLEANED" = ? WHERE "uid" = ? AND "gid" = ?';
+                                SET "status" = ?, "is_cleaned" = ? WHERE "uid" = ? AND "gid" = ?';
                         }
 
                         $Query = \OC_DB::prepare($SQL);
