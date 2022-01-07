@@ -136,7 +136,7 @@ class Queue extends Controller
 
                 if ($this->DbType == 1) {
                     $SQL = 'SELECT * FROM *PREFIX*ocdownloader_queue WHERE "uid" = ? AND "status" IN '
-                        . $StatusReq . ' AND "is_cleaned" IN ' . $IsCleanedReq . ' ORDER BY "TIMESTAMP" ASC';
+                        . $StatusReq . ' AND "is_cleaned" IN ' . $IsCleanedReq . ' ORDER BY "timestamp" ASC';
                 }
                 $Query = \OC_DB::prepare($SQL);
                 $Request = $Query->execute($Params);
